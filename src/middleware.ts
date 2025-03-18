@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { PrismaD1 } from "@prisma/adapter-d1";
-import { PrismaClient } from "@prisma/client/wasm";
+import { PrismaClient } from "@prisma/client";
 
 const initDB = () => {
   const { env } = getCloudflareContext();
