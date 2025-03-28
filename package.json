@@ -10,9 +10,7 @@
 		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
 		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-		"generate-db-types": "prisma generate --schema=./src/schema.prisma",
-		"migrate:diff": "wrangler d1 migrations create OPENNEXT_TEST_DB rename_me && prisma migrate diff --from-local-d1 --to-schema-datamodel ./src/schema.prisma --script --output \"$(find ./migrations -type f -name '*rename_me.sql' | head -n 1)\"",
-		"migrate:apply": "wrangler d1 migrations apply OPENNEXT_TEST_DB"
+		"generate-db-types": "prisma generate --schema=./src/schema.prisma"
 	},
 	"dependencies": {
 		"@prisma/adapter-d1": "^6.5.0",
@@ -23,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250313.0",
-		"@opennextjs/cloudflare": "^0.6.2",
+		"@opennextjs/cloudflare": "^0.6.3",
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
